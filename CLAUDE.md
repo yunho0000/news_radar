@@ -1,4 +1,4 @@
-# CLAUDE.md — 소재 레이더 (news_rader)
+# CLAUDE.md — 소재 레이더 (news_radar)
 
 이 레포는 연예·스포츠 카드뉴스 소재를 자동으로 모으고 점수를 매기는 웹 도구 "소재 레이더"다.
 전체 기획은 `docs/PLAN.md`, 데이터 형식은 `docs/DATA.md`(이슈 #2에서 작성)를 본다.
@@ -14,6 +14,14 @@
 ## 이슈 번호 안내
 
 GitHub 이슈 번호는 기획서 12장 번호와 같다 (#1~#13). 단, 기획서의 **#0 인스타 spike는 GitHub에서 #14**다.
+
+## GitHub 계정
+
+이 레포(`yunho0000/news_radar`)는 **yunho0000** 계정으로 작업한다. 컴퓨터 전체의 기본 gh 계정은 다른 계정(sa2cademy)이므로:
+
+- `gh` 명령(이슈·PR 등)은 항상 앞에 `GH_TOKEN=$(gh auth token --user yunho0000)`를 붙여 실행한다.
+- `gh auth switch`로 전체 기본 계정을 바꾸지 않는다.
+- git 커밋 작성자와 push 계정은 이 폴더의 git 설정에 이미 yunho0000으로 지정돼 있다.
 
 ---
 

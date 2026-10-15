@@ -1,0 +1,17 @@
+# 비밀값 (절대 커밋하지 않는다)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# 웹
+node_modules/
+dist/
+
+# 기타
+.DS_Store
