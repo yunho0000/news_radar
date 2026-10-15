@@ -1,0 +1,48 @@
+# 수집 소스 목록
+# 소스 추가 = 여기 항목 하나 + collector/sources/ 에 수집 모듈 하나 (기획서 4장)
+#
+# module:     collector/sources/ 안의 모듈 파일 이름
+# enabled:    false면 수집하지 않는다
+# stage:      몇 단계 기능인지 (mvp / 2 / 3)
+# rate_limit: 한도가 있는 API만. 한도 장부(api_ledger)를 거쳐서만 호출한다 (기획서 6장)
+#
+# API 키는 여기에 쓰지 않는다. GitHub Secrets / 환경변수 이름만 적는다.
+
+sources:
+  - id: google_trends
+    name: 구글 트렌드 한국 급상승어
+    module: trends
+    enabled: true
+    stage: mvp
+    url: "https://trends.google.com/trending/rss?geo=KR"
+
+  - id: news_rss
+    name: 뉴스 RSS
+    module: rss
+    enabled: true
+    stage: mvp
+    # 주소는 categories.yaml의 카테고리별 rss 목록을 사용한다
+
+  - id: naver_datalab
+    name: 네이버 데이터랩 검색어 트렌드
+    module: datalab
+    enabled: false
+    stage: 2
+    secrets: [NAVER_CLIENT_ID, NAVER_CLIENT_SECRET]
+
+  - id: instagram_hashtag
+    name: 인스타그램 해시태그 검색
+    module: instagram
+    enabled: false
+    stage: 2
+    secrets: [INSTAGRAM_ACCESS_TOKEN]
+    rate_limit:
+      unique_queries: 30   # 서로 다른 해시태그 30개
+      period_days: 7       # 7일 동안
+
+  - id: youtube_views
+    name: 유튜브 조회수
+    module: youtube
+    enabled: false
+    stage: 2
+    secrets: [YOUTUBE_API_KEY]
