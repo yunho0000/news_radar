@@ -27,3 +27,4 @@ normalize_within_category: true
 board:
   top_n_expanded: 5         # "지금 뜨는 것"에서 크게 보여줄 개수
   upcoming_days: 7          # "곧 올 것"에 보여줄 기간 (일)
+  covered_min_shared_keywords: 1  # 발행한 소재와 키워드가 이 개수 이상 겹치면 "이미 다룬 소재" 표시

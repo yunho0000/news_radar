@@ -36,7 +36,7 @@ news_radar/
 | --- | --- |
 | 데이터베이스 만들기 | [docs/DATA.md 6장](docs/DATA.md) 참고 (Supabase SQL Editor에서 `db/schema.sql` → `db/seed.sql` 실행) |
 | 수집 파이프라인 실행 (`python -m collector ...`) | #3 ~ #6 |
-| 웹 보드 실행 (`cd web && npm run dev`) | #7 |
+| 웹 보드 실행 (`cd web && npm run dev`) | #7 — [web/README.md](web/README.md) 참고 |
 | 자동 수집 (3~4시간마다) | #11 |
 | 웹 배포 주소 | #12 |
 
