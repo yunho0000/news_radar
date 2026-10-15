@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 언론사 한 곳(연합뉴스형)의 섹션 RSS 모양을 본뜬 샘플. <source> 태그가 없다. 내용은 가상이다. -->
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title><![CDATA[가상통신 스포츠 최신기사]]></title>
+    <link>https://news.example.com/sports</link>
+    <item>
+      <title><![CDATA['만년 꼴찌' 가상FC, 개막 4연승 질주]]></title>
+      <link>https://news.example.com/view/SPORTS-001</link>
+      <guid isPermaLink="true">https://news.example.com/view/SPORTS-001</guid>
+      <dc:creator>가상기자</dc:creator>
+      <description><![CDATA[(서울=가상통신) 본문 첫 문단입니다. 저장하면 안 됩니다.]]></description>
+      <content:encoded><![CDATA[<p>전체 본문입니다. 저장하면 안 됩니다.</p>]]></content:encoded>
+      <enclosure url="https://news.example.com/photo.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title><![CDATA[
+        가상 선수, 시즌 30호 홈런
+      ]]></title>
+      <link>
+        https://news.example.com/view/SPORTS-002
+      </link>
+    </item>
+    <item>
+      <title>스포츠와 연예 양쪽에 실린 가상 기사 - 가상일보</title>
+      <link>https://news.google.com/rss/articles/SAMPLE-BOTH-001?oc=5</link>
+    </item>
+  </channel>
+</rss>
