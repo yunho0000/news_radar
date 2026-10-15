@@ -35,10 +35,20 @@ news_radar/
 | 무엇 | 언제 생기나 |
 | --- | --- |
 | 데이터베이스 만들기 | [docs/DATA.md 6장](docs/DATA.md) 참고 (Supabase SQL Editor에서 `db/schema.sql` → `db/seed.sql` 실행) |
-| 수집 파이프라인 실행 (`python -m collector ...`) | #3 ~ #6 |
+| 수집 파이프라인 실행 (`python -m collector`) | #3 ~ #6 (아래 "수집 실행하기") |
 | 웹 보드 실행 (`cd web && npm run dev`) | #7 |
 | 자동 수집 (3~4시간마다) | #11 |
 | 웹 배포 주소 | #12 |
+
+## 수집 실행하기
+
+```bash
+pip install -r requirements.txt                      # 처음 한 번: 필요한 패키지 설치
+python -m collector --source google_trends --dry-run # DB에 저장하지 않고 결과만 보기
+python -m pytest                                     # 테스트 (저장된 샘플 응답 사용, 인터넷·DB 불필요)
+```
+
+`--dry-run`을 빼면 `mentions` 표에 저장합니다. 이때는 환경변수 `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`가 필요합니다 (자동 수집에서는 GitHub Secrets에서 넣음, #11).
 
 ## 설정 바꾸기
 
