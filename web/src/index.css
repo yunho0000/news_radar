@@ -1,0 +1,103 @@
+:root {
+  --bg: #f5f6f8;
+  --panel: #ffffff;
+  --text: #1c1f24;
+  --muted: #6b7280;
+  --line: #e3e6eb;
+  --accent: #2f6fed;
+  --rising: #d6452f;
+  --peak: #c58a00;
+  --falling: #4b7bb5;
+  --covered: #7c3aed;
+  font-family: system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.45;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; cursor: pointer; }
+
+/* 상단 바 */
+.board-header {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;
+  padding: 12px 16px; background: var(--panel); border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 1;
+}
+.board-header h1 { font-size: 18px; }
+.filter { display: flex; gap: 4px; }
+.filter button {
+  border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 12px;
+}
+.filter button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.meta { margin-left: auto; display: flex; gap: 12px; align-items: center; font-size: 13px; color: var(--muted); }
+button.link { border: 0; background: none; color: var(--accent); padding: 0; }
+
+/* 3칸 보드 */
+.columns {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; padding: 16px;
+  max-width: 1400px; margin: 0 auto;
+}
+.column { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.column h2 { font-size: 15px; }
+.column h2 small { color: var(--muted); font-weight: normal; margin-left: 4px; }
+.empty { color: var(--muted); font-size: 14px; padding: 12px 0; }
+
+/* 소재 카드 */
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.card-large { padding: 14px 16px; }
+.card-top { display: flex; align-items: flex-start; gap: 8px; }
+.card-top h3 { flex: 1; font-size: 14px; overflow-wrap: anywhere; }
+.card-large .card-top h3 { font-size: 16px; }
+.rank { color: var(--muted); font-weight: bold; min-width: 1.2em; }
+.score { font-weight: bold; color: var(--accent); white-space: nowrap; }
+.card-large .score { font-size: 18px; }
+.badges { display: flex; flex-wrap: wrap; gap: 4px; }
+.badge { font-size: 12px; padding: 1px 8px; border-radius: 999px; background: #eef0f3; color: #374151; }
+.phase-rising { background: #fde8e4; color: var(--rising); }
+.phase-peak { background: #fdf3d6; color: var(--peak); }
+.phase-falling { background: #e3ecf7; color: var(--falling); }
+.badge.status { background: #e6effe; color: var(--accent); }
+.badge.covered { background: #efe6fd; color: var(--covered); font-weight: bold; }
+.tags { font-size: 12px; color: var(--muted); }
+.toggle {
+  border: 1px dashed var(--line); background: transparent; border-radius: 8px; padding: 8px; color: var(--muted);
+}
+
+/* 곧 올 것 */
+.events { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.event {
+  display: flex; gap: 12px; align-items: center; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+}
+.dday { font-weight: bold; color: var(--accent); min-width: 3em; }
+.event-title { font-size: 14px; overflow-wrap: anywhere; }
+.sub { font-size: 12px; color: var(--muted); }
+
+/* 로그인·안내 */
+.login, .notice {
+  max-width: 360px; margin: 15vh auto 0; padding: 24px; background: var(--panel);
+  border: 1px solid var(--line); border-radius: 12px; display: flex; flex-direction: column; gap: 12px;
+}
+.login label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.login input { font: inherit; padding: 8px; border: 1px solid var(--line); border-radius: 6px; }
+.login button[type='submit'] { padding: 10px; border: 0; border-radius: 6px; background: var(--accent); color: #fff; }
+.error { color: var(--rising); font-size: 14px; }
+
+/* 태블릿: 지금 뜨는 것을 위에 넓게, 나머지 두 칸은 아래에 나란히 */
+@media (max-width: 1000px) {
+  .columns { grid-template-columns: 1fr 1fr; }
+  .columns > .column:first-child { grid-column: 1 / -1; }
+}
+
+/* 휴대폰: 한 줄로 쌓기 */
+@media (max-width: 640px) {
+  .columns { grid-template-columns: 1fr; padding: 12px; }
+  .meta { margin-left: 0; width: 100%; }
+  .login, .notice { margin: 8vh 16px 0; }
+}
