@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 구글 트렌드 한국 급상승어 RSS 샘플 응답 (2026-10-15 실제 응답 구조를 본떠 만듦. 이름·기사는 가상) -->
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ht="https://trends.google.com/trending/rss" version="2.0">
+	<channel>
+		<title>Daily Search Trends</title>
+		<description>Recent searches</description>
+		<link>https://trends.google.com/trending/rss?geo=KR</link>
+		<atom:link href="https://trends.google.com/trending/rss?geo=KR" rel="self" type="application/rss+xml"/>
+		<item>
+			<title>가상가수 컴백</title>
+			<ht:approx_traffic>2000+</ht:approx_traffic>
+			<description/>
+			<link>https://trends.google.com/trending/rss?geo=KR</link>
+			<pubDate>Thu, 15 Oct 2026 06:00:00 -0700</pubDate>
+			<ht:picture>https://example.com/picture1.jpg</ht:picture>
+			<ht:picture_source>가상일보</ht:picture_source>
+			<ht:news_item>
+				<ht:news_item_title>가상가수, 2년 만에 &apos;새 앨범&apos;으로 컴백</ht:news_item_title>
+				<ht:news_item_snippet/>
+				<ht:news_item_url>https://news.example.com/a/1</ht:news_item_url>
+				<ht:news_item_picture>https://example.com/news1.jpg</ht:news_item_picture>
+				<ht:news_item_source>가상일보</ht:news_item_source>
+			</ht:news_item>
+			<ht:news_item>
+				<ht:news_item_title>가상가수 컴백 쇼케이스 현장</ht:news_item_title>
+				<ht:news_item_snippet/>
+				<ht:news_item_url>https://news.example.com/a/2</ht:news_item_url>
+				<ht:news_item_picture>https://example.com/news2.jpg</ht:news_item_picture>
+				<ht:news_item_source>가상스포츠</ht:news_item_source>
+			</ht:news_item>
+		</item>
+		<item>
+			<title>가상FC 역전승</title>
+			<ht:approx_traffic>500+</ht:approx_traffic>
+			<description/>
+			<link>https://trends.google.com/trending/rss?geo=KR</link>
+			<pubDate>Thu, 15 Oct 2026 05:00:00 -0700</pubDate>
+			<ht:news_item>
+				<ht:news_item_title>가상FC, 후반 추가시간 역전승</ht:news_item_title>
+				<ht:news_item_snippet/>
+				<ht:news_item_url>https://news.example.com/b/1</ht:news_item_url>
+				<ht:news_item_source>가상스포츠</ht:news_item_source>
+			</ht:news_item>
+			<ht:news_item>
+				<!-- 앞 검색어와 같은 기사 링크: 한 번만 저장돼야 함 -->
+				<ht:news_item_title>가상가수, 2년 만에 &apos;새 앨범&apos;으로 컴백</ht:news_item_title>
+				<ht:news_item_snippet/>
+				<ht:news_item_url>https://news.example.com/a/1</ht:news_item_url>
+				<ht:news_item_source>가상일보</ht:news_item_source>
+			</ht:news_item>
+		</item>
+		<item>
+			<!-- 관련 기사가 없는 검색어: 검색어 줄만 생겨야 함 -->
+			<title>  가상드라마 결말  </title>
+			<ht:approx_traffic>200+</ht:approx_traffic>
+			<description/>
+			<link>https://trends.google.com/trending/rss?geo=KR</link>
+			<pubDate>Thu, 15 Oct 2026 04:00:00 -0700</pubDate>
+		</item>
+	</channel>
+</rss>
