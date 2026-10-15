@@ -1,4 +1,4 @@
-# 소재 레이더 (news_rader)
+# 소재 레이더 (news_radar)
 
 연예·스포츠 분야에서 지금 뜨는 소재를 자동으로 모으고, 카드뉴스로 만들 가치가 있는지 점수와 근거를 보여주는 웹 도구입니다.
 
@@ -11,7 +11,7 @@
 ## 폴더 구조
 
 ```text
-news_rader/
+news_radar/
 ├─ config/              설정 파일 (코드를 고치지 않고 동작을 바꾸는 값)
 │  ├─ categories.yaml   카테고리와 카테고리별 RSS 목록
 │  ├─ sources.yaml      수집 소스 목록과 켜짐 여부

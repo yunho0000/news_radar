@@ -1,4 +1,4 @@
-# CLAUDE.md — 소재 레이더 (news_rader)
+# CLAUDE.md — 소재 레이더 (news_radar)
 
 이 레포는 연예·스포츠 카드뉴스 소재를 자동으로 모으고 점수를 매기는 웹 도구 "소재 레이더"다.
 전체 기획은 `docs/PLAN.md`, 데이터 형식은 `docs/DATA.md`(이슈 #2에서 작성)를 본다.
