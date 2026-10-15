@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 구글 뉴스 섹션 RSS 모양을 본뜬 샘플. 기사 제목·언론사는 모두 가상이다. -->
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>엔터테인먼트 - 최신 뉴스 - Google 뉴스</title>
+    <link>https://news.google.com/</link>
+    <item>
+      <title>가상그룹 A, 정규 2집으로 컴백 확정 - 가상일보</title>
+      <link>https://news.google.com/rss/articles/SAMPLE-ENT-001?oc=5</link>
+      <guid isPermaLink="false">SAMPLE-ENT-001</guid>
+      <pubDate>Thu, 15 Oct 2026 13:00:00 GMT</pubDate>
+      <description>&lt;a href="https://example.com/1"&gt;본문 미리보기 문장입니다. 저장하면 안 됩니다.&lt;/a&gt;</description>
+      <source url="https://example.com">가상일보</source>
+      <media:content url="https://example.com/photo1.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>배우 홍길동 &amp; 김영희, 새 드라마 &quot;첫방&quot; 시청률 1위 - 샘플스포츠</title>
+      <link>https://news.google.com/rss/articles/SAMPLE-ENT-002?oc=5</link>
+      <description>두 번째 기사 본문 미리보기</description>
+      <source url="https://example.org">샘플스포츠</source>
+    </item>
+    <item>
+      <title>스포츠와 연예 양쪽에 실린 가상 기사 - 가상일보</title>
+      <link>https://news.google.com/rss/articles/SAMPLE-BOTH-001?oc=5</link>
+      <source url="https://example.com">가상일보</source>
+    </item>
+    <item>
+      <title>원래 제목에 붙은 꼬리 - 가상비즈 - Gasang Biz</title>
+      <link>https://news.google.com/rss/articles/SAMPLE-ENT-003?oc=5</link>
+      <source url="https://example.net">Gasang Biz</source>
+    </item>
+    <item>
+      <title>링크가 없는 기사는 건너뛴다 - 가상일보</title>
+      <source url="https://example.com">가상일보</source>
+    </item>
+  </channel>
+</rss>
